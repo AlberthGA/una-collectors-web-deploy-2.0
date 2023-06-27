@@ -1,0 +1,50 @@
+###
+# Create User
+POST http://localhost:3000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "ddd",
+    "email": "johndoe@123.com",
+    "password": "password123"
+}
+
+###
+# Retrieve Users
+GET http://localhost:3000/api/users/ HTTP/1.1
+
+
+
+
+
+###Para obtener los filtros preguntenle a chatGPT lo que quieren mostrandole un ejemplo de su esquema. 
+###Yo utilice el siguiente promt => 
+#Dame un filtro para mongo, únicamente el JSON. Mi esquema es "{
+#    "name": "Luis Barquero Villalobos",
+#    "email": "johndoe@123.com",
+#    "password": "password123"
+#}
+#" y quiero obtener todos los usuarios que pertenezcan al dominio de correo "@example.com"
+
+###
+# Retrieve Users with an email from the domain @example.com
+GET http://localhost:3000/api/users/byFilter?Filter={"email": { "$regex": "@example\\.com$", "$options": "i" }} HTTP/1.1
+
+###
+# Retrieve User
+GET http://localhost:3000/api/users/6466d960439913e75b250ad5 HTTP/1.1
+
+###
+# Update User
+PUT http://localhost:3000/api/users/6466e2bf650916b5b1f9a668 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Hola Upgrade 7",
+    "email": "updatedemail@example.com"
+}
+
+###
+# Delete User
+DELETE http://localhost:3000/api/users/6466e2bf650916b5b1f9a668 HTTP/1.1
+

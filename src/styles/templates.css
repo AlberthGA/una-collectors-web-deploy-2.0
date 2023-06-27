@@ -1,0 +1,102 @@
+.body {
+  font-family: Arial, sans-serif;
+  margin: 5;
+  padding: 20px;
+  color: #333;
+}
+
+.h1 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.h2 {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.p, .ul, .ol {
+  font-size: 16px;
+  margin-bottom: 10px;
+  line-height:1.2;
+  text-align: justify;
+
+}
+
+.li {
+  margin-bottom: 5px;
+}
+
+.table {
+border: none;
+border-collapse:collapse;
+font-family: Arial, sans-serif;
+padding:5px;
+}
+
+.table th {
+border:none;
+padding:5px;
+background:#F0F0F0;
+width: 15px;
+}
+
+.table td {
+border:none;
+text-align:left;
+padding:5px;
+}
+
+.columna-negra{
+font-weight: bold;
+}
+
+.notas{
+font-family: Arial, sans-serif;
+margin: 5;
+padding: 15px;
+}
+
+.checkbox-container {
+display: inline-block;
+vertical-align: middle;
+cursor: pointer;
+}
+
+.checkbox-container input[type="checkbox"] {
+display: none;
+}
+
+.checkbox-custom {
+display: inline-block;
+width: 20px;
+height: 20px;
+border-radius: 3px;
+background-color: #e9ecee;
+border: 1px solid #adb8c0;
+transition: all 0.3s ease;
+}
+
+.checkbox-container input[type="checkbox"]:checked + .checkbox-custom {
+background-color: #428bb9;
+border: 1px solid #428bb9;
+}
+
+.checkbox-custom:before {
+content: '\2713';
+display: block;
+width: 20px;
+height: 20px;
+text-align: center;
+line-height: 20px;
+color: #ffffff;
+font-size: 14px;
+transition: all 0.3s ease;
+}
+
+.checkbox-container input[type="checkbox"]:checked + .checkbox-custom:before {
+content: '\2714';
+}
